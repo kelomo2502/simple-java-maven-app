@@ -32,6 +32,9 @@
 
 pipeline {
     agent {label "dev-server"}
+    tools {
+        maven 'gb-maven'
+        }
     stages {
         stage("build"){
             steps {
@@ -39,7 +42,7 @@ pipeline {
             }
             post {
                 success {
-                   archiveArtifacts artifacts: '**/target/*.war'
+                    archiveArtifacts artifacts: '**/target/*.war'
                 }
                 }
 
