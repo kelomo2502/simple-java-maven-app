@@ -35,18 +35,9 @@ pipeline {
     stages {
         stage("build"){
             steps {
-                echo "Running build stage"
+                sh 'maven clean package'
             }
         }
-        stage("test"){
-            steps {
-                echo "Running test stage"
-            }
-        }
-        stage("deploy"){
-            steps {
-                echo "Running deployment stage"
-            }
-        }
+        
     }
 }
