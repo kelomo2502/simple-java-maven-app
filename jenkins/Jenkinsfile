@@ -31,7 +31,7 @@
 
 
 pipeline {
-    agent {label "dev-server"}
+    agent {label "prod-server"}
     tools {
         maven 'gb-maven'
         }
